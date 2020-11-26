@@ -1,5 +1,9 @@
 console.log('App.js is running!');
 
+var app= {
+    title: 'Indecision App',
+    subtitle: 'Put ypur life in the hands of a computer'
+};
 // JSX - JavaScript XML
 var template = (
   <div> 
@@ -12,11 +16,16 @@ var template = (
   </div>
 );
 
+var user = {
+    name: 'Andrew',
+    age: 19,
+    Location: 'Johannesburg'
+};
 var templateTwo= (
     <div>
     <h1>Tatenda Kumbula</h1>
     <p>Age: 26</p>
-    <p>Location: Philadelphia</p>
+    <p>Location: Johannesburg</p>
     </div>
 );
 
