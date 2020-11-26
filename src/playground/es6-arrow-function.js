@@ -1,20 +1,13 @@
- //src/playground/es6-arrow-function.js --out-file=public/scripts/app.js --presets=env,react --watch
-//const square = function (x) {
-    //return x * x;
-//};
+function square(x) {
+    return x * x;
+};
 
-//const squareArrow =(x) =>{
-    //return x * x;
-//};
+console.log(square(3));
 
-//const squareArrow = (X) => x * x;
+const squareArrow = (x) => {
+    return x * x;
+};
 
-//console.log(squareArrow(9));
+consts squareArrow = (x) => x * x;
 
-
-const getFirstName = (fullName ) => {
-    return fullName.split(' ')[0];
-}; 
-
-const getFirstName = (fullName ) => fullName.split(' ')[0];
-console.log(getFirstName('Tatenda Kumbula'));
+console.log(squareArrow(4));
