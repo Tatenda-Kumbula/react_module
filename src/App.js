@@ -1,9 +1,23 @@
+const { render } = require("@testing-library/react");
+
 console.log('App.js is running!');
 
 var app= {
     title: 'Indecision App',
     subtitle: 'Put ypur life in the hands of a computer',
     options: []
+};
+
+const onFormSubmit = (e) => {
+    e.preventDefault();
+
+    const option = e.tartget.elements.option.value;
+
+    if (option) {
+        app.options.push(option);
+        e.target.elements.option.value= '';
+        render();
+    }
 };
 
 var template = (
