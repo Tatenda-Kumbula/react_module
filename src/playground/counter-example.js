@@ -5,7 +5,17 @@ class Counter extends React.Component{
     this.handleMinusOne = this.handleMinusOne.bind(this);
     this.handleReset = this.handleReset.bind(this);
   }
+handleAddOne(){
+  console.log('handleAddOne');
 }
+handleMinusOne() {
+  console.log('handleMinusOne');
+}
+handleReset(){
+  console.log('handleReser');
+}
+}
+
 
 
 // let count = 0;
