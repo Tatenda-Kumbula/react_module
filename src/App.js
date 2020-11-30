@@ -31,3 +31,24 @@ class Action extends React.Component {
     }
   }
     
+  class Action extends React.Component {
+    render() {
+        return (
+          <div>
+             AddOption component here
+          </div>  
+        );
+    }
+  }
+
+  const jsx = (
+    <div>
+      <Header />
+      <Action />
+      <Options />
+      <AddOption />
+    </div>
+  );
+  
+  ReactDOM.render(jsx, document.getElementById('app'));
+  
