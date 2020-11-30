@@ -45,10 +45,16 @@ class Action extends React.Component {
 }
 
 class Action extends React.Component {
+    handleRemoveAll(){
+        alert(' handleRemoveAll');
+    }
     render() {
         return (
           <div>
-           {this.props.optionText}
+          <button onClick={this.handleRemoveAll}>Remove All</button>
+          {
+            this.props.options.map((option) => <Option key={option} optionText={option} />)
+          }
           </div>  
         );
     }
@@ -66,16 +72,34 @@ class Action extends React.Component {
     }
   }
 
-  class Action extends React.Component {
+  class Option extends React.Component {
     render() {
-        return (
-          <div>
-             AddOption component here
-          </div>  
-        );
+      return (
+        <div>
+          {this.props.optionText}
+        </div>
+      );
     }
   }
-
-
-  ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
   
+  class AddOption extends React.Component {
+    handleAddOption(e) {
+      e.preventDefault();
+  
+      const option = e.target.elements.option.value.trim();
+  
+      if (option) {
+        alert(option);
+      }
+    }
+    render() {
+      return (
+        <div>
+          <form onSubmit={this.handleAddOption}>
+            <input type="text" name="option" />
+            <button>Add Option</button>
+          </form>
+        </div>
+      );
+    }
+  }
