@@ -1,6 +1,11 @@
 const { render } = require("@testing-library/react");
 class IndecisionApp extends React.Component {
     render(){
+        const title = 'Indecision';
+        const subtitle = 'Put your life in the hands of a computer';
+        const options = ['Thing one', 'Thing two', 'Thing four'];
+        
+        
         return(
             <div>
             <Header title={title} subtitle={subtitle}/>
