@@ -12,9 +12,24 @@ handleMinusOne() {
   console.log('handleMinusOne');
 }
 handleReset(){
-  console.log('handleReser');
+  console.log('handleReset');
+}
+render() {
+  return (
+    <div>
+      <h1>Count: </h1>
+      <button onClick={this.handleAddOne}>+1</button>
+      <button onClick={this.handleMinusOne}>-1</button>
+      <button onClick={this.handleReset}>reset</button>
+    </div>
+  );
 }
 }
+
+ReactDOM.render(<Counter />, document.getElementById('app'));
+
+
+
 
 
 
