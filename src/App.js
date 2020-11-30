@@ -3,9 +3,9 @@ class IndecisionApp extends React.Component {
     render(){
         return(
             <div>
-            <Header />
+            <Header title={title} subtitle={subtitle}/>
             <Action />
-            <Options />
+            <Options options={options} />
             <AddOption />
             
             </div>
