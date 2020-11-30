@@ -8,8 +8,14 @@ getGretting() {
 }
 getDescription() {
     return '${this.name} is ${this.age} year(s) old.';
-
  }
+}
+
+class Student extends Person {
+    constructor(name, age, major) {
+        super(name, age);
+        this.major = major;
+    }
 }
  class Student extends Person {
      constructor(name,age,major) {
