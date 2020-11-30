@@ -1,4 +1,19 @@
 const { render } = require("@testing-library/react");
+class IndecisionApp extends React.Component {
+    render(){
+        return(
+            <div>
+            <Header />
+            <Action />
+            <Options />
+            <AddOption />
+            
+            </div>
+
+        );
+    }
+}
+
 
 class Header extends React.Component {
     render() {
@@ -41,14 +56,6 @@ class Action extends React.Component {
     }
   }
 
-  const jsx = (
-    <div>
-      <Header />
-      <Action />
-      <Options />
-      <AddOption />
-    </div>
-  );
-  
+
   ReactDOM.render(jsx, document.getElementById('app'));
   
