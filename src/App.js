@@ -1,3 +1,4 @@
+const { render } = require("@testing-library/react");
 
 class Header extends React.Component {
     render() {
@@ -8,4 +9,15 @@ class Header extends React.Component {
         </div>
         );
     }
-}    
+}
+
+class Action extends React.Component {
+  render() {
+      return (
+        <div>
+        <button>What should I do?</button>
+        </div>  
+      );
+  }
+}
+  <button></button>
