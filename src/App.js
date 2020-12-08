@@ -68,6 +68,9 @@ const Header = (props) => {
   );
 };
 
+Header.defaultProps = {
+  title: 'Indecision'
+};
 
 
 const Action = (props) => {
