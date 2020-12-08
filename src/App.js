@@ -87,25 +87,21 @@ const Action = (props) => {
 };
 
 
-const Options = (props) => {
-  return (
-    <div>
-      <button onClick={props.handleDeleteOptions}>Remove All</button>
-      {
-        props.options.map((option) => <Option key={option} optionText={option} />)
-      }
-    </div>
-  );
-};
-
-
 const Option = (props) => {
   return (
     <div>
       {props.optionText}
+      <button
+        onClick={(e) => {
+          props.handleDeleteOption(props.optionText);
+        }}
+      >
+        remove
+      </button>
     </div>
   );
 };
+
 
 class AddOption extends React.Component {
   constructor(props) {
@@ -121,9 +117,7 @@ class AddOption extends React.Component {
     const option = e.target.elements.option.value.trim();
     const error = this.props.handleAddOption(option);
 
-    this.setState(() => {
-      return { error };
-    });
+    this.setState(() => ({ error }));
   }
   render() {
     return (
