@@ -1,7 +1,4 @@
-// import './utils.js';
-// import subtract, { square, add } from './utils.js';
+import validator from 'validator';
+import validatoe from 'validator';
 
-import isSenior, { isAdult, canDrink } from './person.js';
-console.log(isAdult(18));
-console.log(canDrink(20));
-console.log(isSenior(65));
+console.log(validator.isEmail('test@gmail.com'));
