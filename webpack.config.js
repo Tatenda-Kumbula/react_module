@@ -3,11 +3,11 @@ const path=require('path');
 
 
 module.exports = {
-  entry: './src/src/App.js',
+  entry: './src/App.js ', 
   output:{
       path:path.join(__dirname,'public'),
       filename: 'bundle.js'
-   
+  
 },
 module : {
   rules: [{
@@ -26,7 +26,6 @@ module : {
 },
 devtool: 'cheap-module-eval-source-map',
 devServer: {
-  contentBase:path.join(__dirname,'public'),
-  historyApiFallback: true
+  contentBase:path.join(__dirname,'public')
 }
 };
